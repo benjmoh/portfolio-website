@@ -1089,6 +1089,23 @@ body {
   .hero {
     padding-top: 50px;
   }
+
+  .skills-icon-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .skills-tech-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .skills-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
 }
 
 @media (max-width: 520px) {
