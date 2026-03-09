@@ -533,8 +533,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 14px;
-  opacity: 0.95;
+  margin: 8px 0 14px;
+  opacity: 0.8;
   transform: translateY(0);
   transition:
     opacity var(--transition-med),
