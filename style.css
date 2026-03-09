@@ -305,7 +305,7 @@ body {
 
 .hero-tagline {
   margin: 0 0 18px;
-  color: #e2ddff;
+  color: #d5c4ff;
   font-size: 0.95rem;
 }
 
@@ -391,6 +391,16 @@ body {
       rgba(127, 92, 255, 0.6)
     );
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.85);
+  transition:
+    transform var(--transition-med),
+    box-shadow var(--transition-med);
+}
+
+.hero-photo-wrapper:hover .hero-photo-ring {
+  transform: scale(1.04);
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.9),
+    0 0 24px rgba(127, 92, 255, 0.7);
 }
 
 .hero-photo {
@@ -659,24 +669,36 @@ body {
 .skills-icon-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 18px;
   align-items: center;
 }
 
 .skills-tech-icon {
-  width: 64px;
-  height: 64px;
+  width: 72px;
+  height: 72px;
   border-radius: 12px;
   padding: 8px;
   background: #ffffff;
   border: 1px solid rgba(15, 15, 26, 0.06);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
   object-fit: contain;
+  transition:
+    transform var(--transition-med),
+    box-shadow var(--transition-med),
+    border-color var(--transition-med);
+}
+
+.skills-tech-icon:hover {
+  transform: scale(1.06);
+  border-color: rgba(127, 92, 255, 0.7);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.6),
+    0 0 18px rgba(127, 92, 255, 0.8);
 }
 
 .skills-methods {
-  margin-top: 14px;
-  padding-top: 12px;
+  margin-top: 26px;
+  padding-top: 16px;
   border-top: 1px solid rgba(15, 15, 26, 0.08);
 }
 
@@ -697,16 +719,31 @@ body {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 7px;
+  gap: 12px;
 }
 
 .skills-list li {
   padding: 4px 9px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(127, 92, 255, 0.5);
   font-size: 0.8rem;
-  color: var(--text-soft);
-  background: transparent;
+  color: #d8d5ff;
+  background: rgba(127, 92, 255, 0.18);
+  transition:
+    transform var(--transition-med),
+    box-shadow var(--transition-med),
+    border-color var(--transition-med),
+    background var(--transition-med),
+    color var(--transition-med);
+}
+
+.skills-list li:hover {
+  transform: translateY(-1px) scale(1.04);
+  border-color: rgba(162, 139, 255, 0.9);
+  background: rgba(127, 92, 255, 0.32);
+  box-shadow:
+    0 14px 32px rgba(0, 0, 0, 0.65),
+    0 0 18px rgba(127, 92, 255, 0.9);
 }
 
 /* Focus */
