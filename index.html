@@ -26,7 +26,6 @@
   <header class="site-header" id="top">
     <div class="container header-inner">
       <a href="#top" class="brand">
-        <span class="brand-mark"></span>
         <span class="brand-text">Benjamin&nbsp;Mohaci</span>
       </a>
 
@@ -122,7 +121,6 @@
       <div class="container section-inner reveal">
         <div class="section-header">
           <h2 id="about-title" class="section-title">About</h2>
-          <p class="section-kicker">Background</p>
         </div>
         <div class="about-body">
           <p>
@@ -132,10 +130,22 @@
             be completed in November 2026 before I graduate.
           </p>
           <p>
-            My work combines analytical thinking, modelling, and real-world
-            Python automation. My dissertation and projects focus on applied
-            machine learning and data science that deliver measurable impact,
-            with clear structure and reproducible results.
+            For my dissertation, I am developing a production-focused machine
+            learning system that predicts when logistics assets in a UK-wide
+            supply chain are likely to become lost. The project uses IoT tracker
+            data from roll cages moving between warehouses, distribution
+            centres, and stores to learn subtle movement patterns that are hard
+            to detect manually, with the goal of surfacing at-risk assets early
+            enough for operations teams to intervene and prevent loss.
+          </p>
+          <p>
+            The system is designed as a human-in-the-loop learning pipeline:
+            operational experts regularly label asset status, this labelled data
+            is fed back into the dataset, and models retrain automatically with
+            updated performance metrics. Across my dissertation and other
+            projects, my focus is on applied machine learning and data science
+            that deliver real commercial impact, with clear structure and
+            reproducible results.
           </p>
         </div>
       </div>
@@ -150,7 +160,6 @@
       <div class="container section-inner">
         <div class="section-header reveal">
           <h2 id="projects-title" class="section-title">Projects</h2>
-          <p class="section-kicker">Selected work</p>
         </div>
 
         <div class="projects-grid">
@@ -250,9 +259,11 @@
               </div>
             </div>
             <p class="project-description">
-              Developing a machine learning project as part of my MSc
-              dissertation, focused on applied predictive modelling and
-              real-world data analysis.
+              Machine learning system for predicting when logistics roll cages
+              in a national UK supply chain are likely to become lost. Uses IoT
+              tracker data, human-in-the-loop labelling, and automated
+              retraining to detect subtle behavioural patterns and surface
+              at-risk assets early enough for commercial intervention.
             </p>
             <div class="project-tags">
               <span class="tag">Python</span>
@@ -278,12 +289,10 @@
       <div class="container section-inner">
         <div class="section-header reveal">
           <h2 id="skills-title" class="section-title">Skills</h2>
-          <p class="section-kicker">Core capabilities</p>
         </div>
 
         <div class="skills-grid">
-          <!-- Core tools -->
-          <article class="skills-card reveal">
+          <article class="skills-card skills-card-wide reveal">
             <div class="skills-card-header">
               <span class="skills-icon">★</span>
               <h3 class="skills-title">Core tools</h3>
@@ -332,22 +341,21 @@
                 loading="lazy"
               />
             </div>
-          </article>
 
-          <!-- Methods & concepts -->
-          <article class="skills-card reveal">
-            <div class="skills-card-header">
-              <span class="skills-icon">∑</span>
-              <h3 class="skills-title">Methods &amp; concepts</h3>
+            <div class="skills-methods">
+              <div class="skills-card-header skills-methods-header">
+                <span class="skills-icon">∑</span>
+                <h3 class="skills-title">Methods &amp; concepts</h3>
+              </div>
+              <ul class="skills-list">
+                <li>PCA</li>
+                <li>SVD</li>
+                <li>Classification &amp; regression</li>
+                <li>Dimensionality reduction</li>
+                <li>Model evaluation &amp; validation</li>
+                <li>Simulation &amp; visualisation</li>
+              </ul>
             </div>
-            <ul class="skills-list">
-              <li>PCA</li>
-              <li>SVD</li>
-              <li>Classification &amp; regression</li>
-              <li>Dimensionality reduction</li>
-              <li>Model evaluation &amp; validation</li>
-              <li>Simulation &amp; visualisation</li>
-            </ul>
           </article>
         </div>
       </div>
@@ -362,7 +370,6 @@
       <div class="container section-inner">
         <div class="section-header reveal">
           <h2 id="contact-title" class="section-title">Contact</h2>
-          <p class="section-kicker">Connect</p>
         </div>
 
         <div class="contact-grid">
@@ -410,9 +417,7 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <span>Benjamin Mohaci</span>
-      <span>2026</span>
-      <span>Built as a personal portfolio</span>
+      <span>© 2026 Benjamin Mohaci. All rights reserved.</span>
     </div>
   </footer>
 
