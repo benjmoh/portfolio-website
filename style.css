@@ -422,6 +422,11 @@ body {
   margin-bottom: 28px;
 }
 
+.section-header-centered {
+  justify-content: center;
+  text-align: center;
+}
+
 .section-title {
   font-size: 1.4rem;
   margin: 0;
@@ -441,6 +446,12 @@ body {
   max-width: 640px;
   line-height: 1.7;
   color: var(--text-soft);
+}
+
+.about-body-centered {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .about-body p + p {
@@ -511,6 +522,54 @@ body {
 
 .project-card:hover::before {
   opacity: 0.65;
+}
+
+.project-card-with-image {
+  padding-top: 0;
+  overflow: hidden;
+}
+
+.project-image {
+  position: relative;
+  margin: 0 -14px 10px;
+  border-radius: 18px 18px 0 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(8px) scale(1.02);
+  transition:
+    opacity var(--transition-med),
+    transform var(--transition-med);
+}
+
+.project-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top left,
+    rgba(127, 92, 255, 0.3),
+    transparent 60%
+  );
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.project-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  transform-origin: center center;
+  transition: transform var(--transition-med);
+}
+
+.project-card-with-image:hover .project-image {
+  opacity: 1;
+  transform: translateY(0) scale(1.04);
+}
+
+.project-card-with-image:hover .project-image img {
+  transform: scale(1.06);
 }
 
 .project-card-featured {
@@ -613,6 +672,13 @@ body {
   background: rgba(15, 15, 26, 0.7);
 }
 
+.project-link-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  display: block;
+}
+
 /* Skills */
 
 .skills-grid {
@@ -669,13 +735,14 @@ body {
 .skills-icon-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 18px;
+  gap: 22px;
   align-items: center;
+  justify-content: center;
 }
 
 .skills-tech-icon {
-  width: 72px;
-  height: 72px;
+  width: 96px;
+  height: 96px;
   border-radius: 12px;
   padding: 8px;
   background: #ffffff;
@@ -719,11 +786,12 @@ body {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  justify-content: center;
+  gap: 16px;
 }
 
 .skills-list li {
-  padding: 4px 9px;
+  padding: 8px 18px;
   border-radius: 999px;
   border: 1px solid rgba(127, 92, 255, 0.5);
   font-size: 0.8rem;
