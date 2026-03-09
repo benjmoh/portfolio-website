@@ -529,6 +529,25 @@ body {
   overflow: hidden;
 }
 
+.project-icon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  opacity: 0.85;
+  transform: translateY(4px);
+  transition:
+    opacity var(--transition-med),
+    transform var(--transition-med);
+}
+
+.project-icon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  display: block;
+}
+
 .project-image {
   position: relative;
   margin: 0 -14px 10px;
@@ -572,6 +591,11 @@ body {
   transform: scale(1.06);
 }
 
+.project-card-with-image:hover .project-icon {
+  opacity: 0;
+  transform: translateY(-4px);
+}
+
 .project-card-featured {
   border-color: rgba(127, 92, 255, 0.6);
   background: radial-gradient(
@@ -590,6 +614,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  margin-top: 6px;
 }
 
 .project-badge-row {
@@ -683,7 +708,7 @@ body {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: minmax(0, 640px);
+  grid-template-columns: minmax(0, 860px);
   justify-content: center;
   gap: 20px;
 }
@@ -734,10 +759,10 @@ body {
 
 .skills-icon-row {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 22px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .skills-tech-icon {
@@ -787,14 +812,14 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 16px;
+  gap: 20px;
 }
 
 .skills-list li {
-  padding: 8px 18px;
+  padding: 12px 26px;
   border-radius: 999px;
   border: 1px solid rgba(127, 92, 255, 0.5);
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   color: #d8d5ff;
   background: rgba(127, 92, 255, 0.18);
   transition:
