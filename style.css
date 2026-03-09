@@ -532,20 +532,21 @@ body {
 .project-icon {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  margin-bottom: 10px;
-  opacity: 0.85;
-  transform: translateY(4px);
+  justify-content: center;
+  margin-bottom: 14px;
+  opacity: 0.95;
+  transform: translateY(0);
   transition:
     opacity var(--transition-med),
     transform var(--transition-med);
 }
 
 .project-icon img {
-  width: 32px;
-  height: 32px;
+  width: 88px;
+  height: 88px;
   object-fit: contain;
   display: block;
+  filter: invert(0.9) grayscale(1) brightness(1.1);
 }
 
 .project-image {
@@ -695,6 +696,7 @@ body {
   opacity: 0.7;
   cursor: default;
   background: rgba(15, 15, 26, 0.7);
+  color: #ffffff;
 }
 
 .project-link-icon {
