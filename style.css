@@ -973,6 +973,12 @@ body {
   font-weight: 600;
 }
 
+.contact-icon img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
 .contact-body h3 {
   margin: 0 0 4px;
   font-size: 0.96rem;
