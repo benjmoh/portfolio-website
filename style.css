@@ -530,13 +530,25 @@ body {
   position: relative;
 }
 
-.project-icon {
+.project-visual {
+  position: relative;
+  height: 140px;
+  margin: 4px 0 18px;
+  transition: height var(--transition-med);
+}
+
+.project-icon,
+.project-image {
+  position: absolute;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px 0 24px;
+}
+
+.project-icon {
   opacity: 0.8;
-  transform: translateY(0);
+  transform: scale(1);
   transition:
     opacity var(--transition-med),
     transform var(--transition-med);
@@ -551,15 +563,11 @@ body {
 }
 
 .project-image {
-  position: relative;
-  margin: 12px 0 10px;
   border-radius: 16px;
   overflow: hidden;
-  max-height: 0;
   opacity: 0;
-  transform: translateY(4px) scale(1.01);
+  transform: scale(1.01);
   transition:
-    max-height var(--transition-med),
     opacity var(--transition-med),
     transform var(--transition-med);
 }
@@ -579,26 +587,29 @@ body {
 
 .project-image img {
   width: 100%;
-  height: 170px;
+  height: 100%;
   object-fit: cover;
   display: block;
   transform-origin: center center;
   transition: transform var(--transition-med);
 }
 
+.project-card-with-image:hover .project-visual {
+  height: 200px;
+}
+
 .project-card-with-image:hover .project-image {
-  max-height: 190px;
   opacity: 1;
-  transform: translateY(0) scale(1.02);
+  transform: scale(1.03);
 }
 
 .project-card-with-image:hover .project-image img {
-  transform: scale(1.04);
+  transform: scale(1.06);
 }
 
 .project-card-with-image:hover .project-icon {
   opacity: 0;
-  transform: translateY(-4px);
+  transform: scale(0.96);
 }
 
 .project-card-featured {
